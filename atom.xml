@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>pluto</title>
+  
+  <subtitle>pluto&#39;s blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://solitary-s.github.io/"/>
+  <updated>2020-03-16T07:34:03.115Z</updated>
+  <id>https://solitary-s.github.io/</id>
+  
+  <author>
+    <name>Tong</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java并发-AQS</title>
+    <link href="https://solitary-s.github.io/2020/03/10/java-bing-fa-aqs/"/>
+    <id>https://solitary-s.github.io/2020/03/10/java-bing-fa-aqs/</id>
+    <published>2020-03-10T13:06:16.000Z</published>
+    <updated>2020-03-16T07:34:03.115Z</updated>
+    
+    <summary type="html">
+    
+      Java并发-AQS
+    
+    </summary>
+    
+    
+      <category term="Java并发" scheme="https://solitary-s.github.io/categories/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    
+      <category term="Java并发" scheme="https://solitary-s.github.io/tags/Java%E5%B9%B6%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发-ThreadLocal</title>
+    <link href="https://solitary-s.github.io/2020/03/09/java-bing-fa-threadlocal/"/>
+    <id>https://solitary-s.github.io/2020/03/09/java-bing-fa-threadlocal/</id>
+    <published>2020-03-09T13:06:16.000Z</published>
+    <updated>2020-03-16T07:33:50.182Z</updated>
+    
+    <summary type="html">
+    
+      Java并发-ThreadLocal
+    
+    </summary>
+    
+    
+      <category term="Java并发" scheme="https://solitary-s.github.io/categories/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    
+      <category term="Java并发" scheme="https://solitary-s.github.io/tags/Java%E5%B9%B6%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发-线程池</title>
+    <link href="https://solitary-s.github.io/2020/03/01/java-bing-fa-xian-cheng-chi/"/>
+    <id>https://solitary-s.github.io/2020/03/01/java-bing-fa-xian-cheng-chi/</id>
+    <published>2020-03-01T09:52:16.000Z</published>
+    <updated>2020-03-16T07:32:02.884Z</updated>
+    
+    <summary type="html">
+    
+      Java并发-线程池
+    
+    </summary>
+    
+    
+      <category term="Java并发" scheme="https://solitary-s.github.io/categories/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    
+      <category term="Java并发" scheme="https://solitary-s.github.io/tags/Java%E5%B9%B6%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Json-Jackson的使用</title>
+    <link href="https://solitary-s.github.io/2020/02/04/json-jackson-de-shi-yong/"/>
+    <id>https://solitary-s.github.io/2020/02/04/json-jackson-de-shi-yong/</id>
+    <published>2020-02-03T16:02:16.000Z</published>
+    <updated>2020-03-16T07:36:29.035Z</updated>
+    
+    <summary type="html">
+    
+      Json-Jackson的使用
+    
+    </summary>
+    
+    
+      <category term="Json" scheme="https://solitary-s.github.io/categories/Json/"/>
+    
+    
+      <category term="Json" scheme="https://solitary-s.github.io/tags/Json/"/>
+    
+      <category term="Jackson" scheme="https://solitary-s.github.io/tags/Jackson/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日志-Log4j</title>
+    <link href="https://solitary-s.github.io/2020/02/04/ri-zhi-log4j/"/>
+    <id>https://solitary-s.github.io/2020/02/04/ri-zhi-log4j/</id>
+    <published>2020-02-03T16:00:16.000Z</published>
+    <updated>2020-03-16T07:36:45.729Z</updated>
+    
+    <summary type="html">
+    
+      日志-Log4j
+    
+    </summary>
+    
+    
+      <category term="日志" scheme="https://solitary-s.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="日志" scheme="https://solitary-s.github.io/tags/%E6%97%A5%E5%BF%97/"/>
+    
+      <category term="Log4j" scheme="https://solitary-s.github.io/tags/Log4j/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试-JUnit</title>
+    <link href="https://solitary-s.github.io/2020/02/02/ce-shi-junit/"/>
+    <id>https://solitary-s.github.io/2020/02/02/ce-shi-junit/</id>
+    <published>2020-02-01T16:02:16.000Z</published>
+    <updated>2020-03-16T07:36:59.439Z</updated>
+    
+    <summary type="html">
+    
+      测试-JUnit
+    
+    </summary>
+    
+    
+      <category term="JUnit" scheme="https://solitary-s.github.io/categories/JUnit/"/>
+    
+    
+      <category term="测试" scheme="https://solitary-s.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="JUnit" scheme="https://solitary-s.github.io/tags/JUnit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>springboot-服务端异常的统一处理</title>
+    <link href="https://solitary-s.github.io/2020/02/01/springboot-fu-wu-duan-yi-chang-de-tong-yi-chu-li/"/>
+    <id>https://solitary-s.github.io/2020/02/01/springboot-fu-wu-duan-yi-chang-de-tong-yi-chu-li/</id>
+    <published>2020-01-31T16:03:16.000Z</published>
+    <updated>2020-02-23T03:08:12.361Z</updated>
+    
+    <summary type="html">
+    
+      springboot-服务端异常的统一处理
+    
+    </summary>
+    
+    
+      <category term="springboot" scheme="https://solitary-s.github.io/categories/springboot/"/>
+    
+    
+      <category term="springboot" scheme="https://solitary-s.github.io/tags/springboot/"/>
+    
+      <category term="异常处理" scheme="https://solitary-s.github.io/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker安装MySQL Redis和RabbitMQ</title>
+    <link href="https://solitary-s.github.io/2020/02/01/docker-an-zhuang-mysql-redis-he-rabbitmq/"/>
+    <id>https://solitary-s.github.io/2020/02/01/docker-an-zhuang-mysql-redis-he-rabbitmq/</id>
+    <published>2020-01-31T16:02:16.000Z</published>
+    <updated>2020-03-16T07:29:30.221Z</updated>
+    
+    <summary type="html">
+    
+      Docker安装MySQL Redis和RabbitMQ
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="https://solitary-s.github.io/categories/Docker/"/>
+    
+    
+      <category term="Docker" scheme="https://solitary-s.github.io/tags/Docker/"/>
+    
+      <category term="环境搭建" scheme="https://solitary-s.github.io/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>swagger2-接口文档引擎</title>
+    <link href="https://solitary-s.github.io/2020/02/01/swagger2-jie-kou-wen-dang-yin-qing/"/>
+    <id>https://solitary-s.github.io/2020/02/01/swagger2-jie-kou-wen-dang-yin-qing/</id>
+    <published>2020-01-31T16:02:16.000Z</published>
+    <updated>2020-02-23T02:57:42.119Z</updated>
+    
+    <summary type="html">
+    
+      swagger2-接口文档引擎
+    
+    </summary>
+    
+    
+      <category term="swagger2" scheme="https://solitary-s.github.io/categories/swagger2/"/>
+    
+    
+      <category term="swagger2" scheme="https://solitary-s.github.io/tags/swagger2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java线程-线程基础</title>
+    <link href="https://solitary-s.github.io/2020/01/04/java-xian-cheng-xian-cheng-ji-chu/"/>
+    <id>https://solitary-s.github.io/2020/01/04/java-xian-cheng-xian-cheng-ji-chu/</id>
+    <published>2020-01-03T16:06:16.000Z</published>
+    <updated>2020-03-16T07:33:53.369Z</updated>
+    
+    <summary type="html">
+    
+      Java线程-线程基础
+    
+    </summary>
+    
+    
+      <category term="Java线程" scheme="https://solitary-s.github.io/categories/Java%E7%BA%BF%E7%A8%8B/"/>
+    
+    
+      <category term="Java线程" scheme="https://solitary-s.github.io/tags/Java%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发-synchronized关键字</title>
+    <link href="https://solitary-s.github.io/2020/01/04/java-bing-fa-synchronized-guan-jian-zi/"/>
+    <id>https://solitary-s.github.io/2020/01/04/java-bing-fa-synchronized-guan-jian-zi/</id>
+    <published>2020-01-03T16:06:16.000Z</published>
+    <updated>2020-03-16T07:31:59.936Z</updated>
+    
+    <summary type="html">
+    
+      Java并发-synchronized关键字
+    
+    </summary>
+    
+    
+      <category term="Java并发" scheme="https://solitary-s.github.io/categories/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    
+      <category term="Java并发" scheme="https://solitary-s.github.io/tags/Java%E5%B9%B6%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发-volatile关键字</title>
+    <link href="https://solitary-s.github.io/2020/01/04/java-bing-fa-volatile-guan-jian-zi/"/>
+    <id>https://solitary-s.github.io/2020/01/04/java-bing-fa-volatile-guan-jian-zi/</id>
+    <published>2020-01-03T16:06:16.000Z</published>
+    <updated>2020-03-16T07:32:11.685Z</updated>
+    
+    <summary type="html">
+    
+      Java并发-volatile关键字
+    
+    </summary>
+    
+    
+      <category term="Java并发" scheme="https://solitary-s.github.io/categories/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    
+      <category term="Java并发" scheme="https://solitary-s.github.io/tags/Java%E5%B9%B6%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java8-函数式编程接口</title>
+    <link href="https://solitary-s.github.io/2020/01/03/java8-han-shu-shi-bian-cheng-jie-kou/"/>
+    <id>https://solitary-s.github.io/2020/01/03/java8-han-shu-shi-bian-cheng-jie-kou/</id>
+    <published>2020-01-02T16:06:16.000Z</published>
+    <updated>2020-03-16T07:31:35.728Z</updated>
+    
+    <summary type="html">
+    
+      Java8-函数式编程接口
+    
+    </summary>
+    
+    
+      <category term="Java8" scheme="https://solitary-s.github.io/categories/Java8/"/>
+    
+    
+      <category term="Java8" scheme="https://solitary-s.github.io/tags/Java8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mybatis-标签使用</title>
+    <link href="https://solitary-s.github.io/2020/01/01/mybatis-biao-qian-shi-yong/"/>
+    <id>https://solitary-s.github.io/2020/01/01/mybatis-biao-qian-shi-yong/</id>
+    <published>2019-12-31T16:03:16.000Z</published>
+    <updated>2020-02-24T14:03:05.630Z</updated>
+    
+    <summary type="html">
+    
+      Mybatis-标签使用
+    
+    </summary>
+    
+    
+      <category term="Mybatis" scheme="https://solitary-s.github.io/categories/Mybatis/"/>
+    
+    
+      <category term="Mybatis" scheme="https://solitary-s.github.io/tags/Mybatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java代码整洁-消除if else</title>
+    <link href="https://solitary-s.github.io/2019/12/31/dai-ma-zheng-ji-xiao-chu-if-else/"/>
+    <id>https://solitary-s.github.io/2019/12/31/dai-ma-zheng-ji-xiao-chu-if-else/</id>
+    <published>2019-12-31T15:18:16.000Z</published>
+    <updated>2020-02-21T15:35:49.178Z</updated>
+    
+    <summary type="html">
+    
+      Java代码整洁-消除if else
+    
+    </summary>
+    
+    
+      <category term="代码整洁" scheme="https://solitary-s.github.io/categories/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81/"/>
+    
+    
+      <category term="代码整洁" scheme="https://solitary-s.github.io/tags/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java代码整洁-复杂的参数校验</title>
+    <link href="https://solitary-s.github.io/2019/12/31/dai-ma-zheng-ji-fu-za-de-can-shu-xiao-yan/"/>
+    <id>https://solitary-s.github.io/2019/12/31/dai-ma-zheng-ji-fu-za-de-can-shu-xiao-yan/</id>
+    <published>2019-12-31T09:18:16.000Z</published>
+    <updated>2020-02-21T15:35:28.448Z</updated>
+    
+    <summary type="html">
+    
+      Java代码整洁-复杂的参数校验
+    
+    </summary>
+    
+    
+      <category term="代码整洁" scheme="https://solitary-s.github.io/categories/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81/"/>
+    
+    
+      <category term="代码整洁" scheme="https://solitary-s.github.io/tags/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式-单例模式的八种写法</title>
+    <link href="https://solitary-s.github.io/2019/12/30/she-ji-mo-shi-dan-li-mo-shi-de-ba-chong-xie-fa/"/>
+    <id>https://solitary-s.github.io/2019/12/30/she-ji-mo-shi-dan-li-mo-shi-de-ba-chong-xie-fa/</id>
+    <published>2019-12-30T13:50:16.000Z</published>
+    <updated>2020-03-16T07:33:44.008Z</updated>
+    
+    <summary type="html">
+    
+      设计模式-单例模式的八种写法
+    
+    </summary>
+    
+    
+      <category term="设计模式" scheme="https://solitary-s.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://solitary-s.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="单例模式" scheme="https://solitary-s.github.io/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java8-LocalDateTime</title>
+    <link href="https://solitary-s.github.io/2019/12/30/java8-localdatetime/"/>
+    <id>https://solitary-s.github.io/2019/12/30/java8-localdatetime/</id>
+    <published>2019-12-30T09:18:16.000Z</published>
+    <updated>2020-01-01T10:11:38.748Z</updated>
+    
+    <summary type="html">
+    
+      Java8-LocalDateTime
+    
+    </summary>
+    
+    
+      <category term="Java8" scheme="https://solitary-s.github.io/categories/Java8/"/>
+    
+    
+      <category term="Java8" scheme="https://solitary-s.github.io/tags/Java8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java基础-BigDecimal</title>
+    <link href="https://solitary-s.github.io/2019/12/30/java-ji-chu-bigdecimal/"/>
+    <id>https://solitary-s.github.io/2019/12/30/java-ji-chu-bigdecimal/</id>
+    <published>2019-12-30T09:03:16.000Z</published>
+    <updated>2019-12-30T09:04:20.479Z</updated>
+    
+    <summary type="html">
+    
+      Java基础-BigDecimal
+    
+    </summary>
+    
+    
+      <category term="Java基础" scheme="https://solitary-s.github.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Java基础" scheme="https://solitary-s.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo的安装和基本使用</title>
+    <link href="https://solitary-s.github.io/2019/11/30/hexo-de-an-zhuang-he-ji-ben-shi-yong/"/>
+    <id>https://solitary-s.github.io/2019/11/30/hexo-de-an-zhuang-he-ji-ben-shi-yong/</id>
+    <published>2019-11-30T13:30:16.000Z</published>
+    <updated>2020-03-16T07:33:46.349Z</updated>
+    
+    <summary type="html">
+    
+      Hexo的安装和基本使用
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="https://solitary-s.github.io/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://solitary-s.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
