@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://solitary-s.github.io/"/>
-  <updated>2020-03-16T07:34:03.115Z</updated>
+  <updated>2020-04-17T14:31:01.141Z</updated>
   <id>https://solitary-s.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringBoot-解决跨域问题</title>
+    <link href="https://solitary-s.github.io/2020/04/17/springboot-jie-jue-kua-yu-wen-ti/"/>
+    <id>https://solitary-s.github.io/2020/04/17/springboot-jie-jue-kua-yu-wen-ti/</id>
+    <published>2020-04-16T16:00:00.000Z</published>
+    <updated>2020-04-17T14:31:01.141Z</updated>
+    
+    <summary type="html">
+    
+      SpringBoot-解决跨域问题
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://solitary-s.github.io/categories/SpringBoot/"/>
+    
+    
+      <category term="SpringBoot" scheme="https://solitary-s.github.io/tags/SpringBoot/"/>
+    
+  </entry>
   
   <entry>
     <title>Java并发-AQS</title>
@@ -216,27 +237,6 @@
   </entry>
   
   <entry>
-    <title>Java线程-线程基础</title>
-    <link href="https://solitary-s.github.io/2020/01/04/java-xian-cheng-xian-cheng-ji-chu/"/>
-    <id>https://solitary-s.github.io/2020/01/04/java-xian-cheng-xian-cheng-ji-chu/</id>
-    <published>2020-01-03T16:06:16.000Z</published>
-    <updated>2020-03-16T07:33:53.369Z</updated>
-    
-    <summary type="html">
-    
-      Java线程-线程基础
-    
-    </summary>
-    
-    
-      <category term="Java线程" scheme="https://solitary-s.github.io/categories/Java%E7%BA%BF%E7%A8%8B/"/>
-    
-    
-      <category term="Java线程" scheme="https://solitary-s.github.io/tags/Java%E7%BA%BF%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java并发-synchronized关键字</title>
     <link href="https://solitary-s.github.io/2020/01/04/java-bing-fa-synchronized-guan-jian-zi/"/>
     <id>https://solitary-s.github.io/2020/01/04/java-bing-fa-synchronized-guan-jian-zi/</id>
@@ -275,6 +275,27 @@
     
     
       <category term="Java并发" scheme="https://solitary-s.github.io/tags/Java%E5%B9%B6%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java线程-线程基础</title>
+    <link href="https://solitary-s.github.io/2020/01/04/java-xian-cheng-xian-cheng-ji-chu/"/>
+    <id>https://solitary-s.github.io/2020/01/04/java-xian-cheng-xian-cheng-ji-chu/</id>
+    <published>2020-01-03T16:06:16.000Z</published>
+    <updated>2020-03-16T07:33:53.369Z</updated>
+    
+    <summary type="html">
+    
+      Java线程-线程基础
+    
+    </summary>
+    
+    
+      <category term="Java线程" scheme="https://solitary-s.github.io/categories/Java%E7%BA%BF%E7%A8%8B/"/>
+    
+    
+      <category term="Java线程" scheme="https://solitary-s.github.io/tags/Java%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
@@ -424,27 +445,6 @@
     
     
       <category term="Java基础" scheme="https://solitary-s.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo的安装和基本使用</title>
-    <link href="https://solitary-s.github.io/2019/11/30/hexo-de-an-zhuang-he-ji-ben-shi-yong/"/>
-    <id>https://solitary-s.github.io/2019/11/30/hexo-de-an-zhuang-he-ji-ben-shi-yong/</id>
-    <published>2019-11-30T13:30:16.000Z</published>
-    <updated>2020-03-16T07:33:46.349Z</updated>
-    
-    <summary type="html">
-    
-      Hexo的安装和基本使用
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="https://solitary-s.github.io/categories/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="https://solitary-s.github.io/tags/Hexo/"/>
     
   </entry>
   

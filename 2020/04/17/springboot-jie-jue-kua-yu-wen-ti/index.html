@@ -4,14 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Java并发-volatile关键字, pluto">
-    <meta name="description" content="简述被 volatile 修饰的共享变量，具有以下两大特性：
+    <meta name="keywords" content="SpringBoot-解决跨域问题, pluto">
+    <meta name="description" content="跨域简介跨域指的是域名不同或者端口不同或者协议不同
 
-保证了不同线程对该变量操作的内存可见性
-禁止指令重排序
-
-Java 内存模型
-JMM(Java 内存模型)规定所有的变量都是存在主存中的，每个线程又包含自己的工作内存，所有的线">
+域名之间的跨域，例如：a.com 和 b.com 
+主域名和子域名之间的跨域，例如ab.a.com 和 a.com
+不同协议之间的跨域，例如https:// 和 http://
+端口不同">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +18,7 @@ JMM(Java 内存模型)规定所有的变量都是存在主存中的，每个线�
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java并发-volatile关键字 | pluto</title>
+    <title>SpringBoot-解决跨域问题 | pluto</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +309,12 @@ JMM(Java 内存模型)规定所有的变量都是存在主存中的，每个线�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java并发-volatile关键字</h1>
+                    <h1 class="description center-align post-title">SpringBoot-解决跨域问题</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +431,8 @@ JMM(Java 内存模型)规定所有的变量都是存在主存中的，每个线�
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java并发/">
-                                <span class="chip bg-color">Java并发</span>
+                            <a href="/tags/SpringBoot/">
+                                <span class="chip bg-color">SpringBoot</span>
                             </a>
                         
                     </div>
@@ -444,8 +443,8 @@ JMM(Java 内存模型)规定所有的变量都是存在主存中的，每个线�
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java并发/" class="post-category">
-                                Java并发
+                            <a href="/categories/SpringBoot/" class="post-category">
+                                SpringBoot
                             </a>
                         
                     </div>
@@ -457,7 +456,7 @@ JMM(Java 内存模型)规定所有的变量都是存在主存中的，每个线�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-04
+                    2020-04-17
                 </div>
                 
 
@@ -474,33 +473,131 @@ JMM(Java 内存模型)规定所有的变量都是存在主存中的，每个线�
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h4><p>被 volatile 修饰的共享变量，具有以下两大特性：</p>
-<ul>
-<li>保证了不同线程对该变量操作的内存可见性</li>
-<li>禁止指令重排序</li>
-</ul>
-<h4 id="Java-内存模型"><a href="#Java-内存模型" class="headerlink" title="Java 内存模型"></a>Java 内存模型</h4><p><img src="http://q6hvsvrsg.bkt.clouddn.com/img/Java-voliate-01.jpg" alt=""></p>
-<p>JMM(Java 内存模型)规定所有的变量都是存在主存中的，每个线程又包含自己的工作内存，所有的线程的操作都是以工作内存为主的，他们只能访问自己的工作内存，且工作前后都要把值同步到主存中。</p>
-<p>在线程执行的时候，首先会从主存中 read 变量值，再 load 到工作内存中的副本中，然后再传给处理器执行，执行完毕后再给工作内存的副本赋值，随后工作内存再把值传回给主存，主存中的值才更新。</p>
-<h5 id="Java-内存模型虽然加快了速度，但是带来了一些问题"><a href="#Java-内存模型虽然加快了速度，但是带来了一些问题" class="headerlink" title="Java 内存模型虽然加快了速度，但是带来了一些问题"></a>Java 内存模型虽然加快了速度，但是带来了一些问题</h5><pre class=" language-java"><code class="language-java">i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span></code></pre>
-<p>假设 i 初始值为 0，当两个线程执行的时候会出现以下情况:</p>
-<pre><code>线程1：load i from 主存  // i = 0
-        i + 1 // i = 1
-线程2：laod i from 主存 // i = 0
-        i + 1 // i = 1
-线程1：save i to 主存
-线程2：save i to 主存</code></pre><p>以上的情况会造成缓存不一致问题</p>
-<h5 id="volatile-解决，保证变量的可见性"><a href="#volatile-解决，保证变量的可见性" class="headerlink" title="volatile 解决，保证变量的可见性"></a>volatile 解决，保证变量的可见性</h5><p><img src="http://q6hvsvrsg.bkt.clouddn.com/img/Java-voliate-02.jpg" alt=""></p>
-<p>解决这个问题，就需要把变量声明为 volatile，这就指示 JVM，这个变量是不稳定的，每次使用它都到主存中进行读取。</p>
-<h4 id="Java-内存模型的三大特性"><a href="#Java-内存模型的三大特性" class="headerlink" title="Java 内存模型的三大特性"></a>Java 内存模型的三大特性</h4><h5 id="原子性-Atomicity"><a href="#原子性-Atomicity" class="headerlink" title="原子性(Atomicity)"></a>原子性(Atomicity)</h5><p>java 中，对于读取和赋值操作都是原子性操作，要做一定做完，要么就没有执行。比如 i = 2;就是简单的读取操作，必定是原子操作， j = i 不是原子操作，分两步，先读取 i 的值，然后再将值赋给 j，JMM 只是实现了基本的原子性，如果是 i++这样的操作，需要借助 synchronized 和 Lock 保证整块代码的原子性。线程在释放锁之前，必定会把 i 的值刷回到主存的。</p>
-<h5 id="可见性-Visibility"><a href="#可见性-Visibility" class="headerlink" title="可见性(Visibility)"></a>可见性(Visibility)</h5><p>Java 就是利用 volatile 来提供可见性的。当一个变量被 volatile 修饰时，那么对它的修改会立刻刷新到主存，当其他线程需要读取该变量时，会去内存中读取新值。而普通变量则不能保证这一点。其实通过 synchronized 和 Lock 也能保证可见性，线程释放锁之前，会报共享变量值都刷回到主存，但是 synchronized 和 Lock 的开销都更大。</p>
-<h5 id="有序性-Ordering"><a href="#有序性-Ordering" class="headerlink" title="有序性(Ordering)"></a>有序性(Ordering)</h5><p>JMM 是允许编译器和处理器对指令重排序的，但是规定了 as-if-serial 含义，即不管怎么重排序，程序的执行结果不能改变。JMM 保证了重排序不会影响单线程的执行，但是在多线程中却容易出现问题。</p>
-<h4 id="synchronized-关键字和-volatile-关键字的区别"><a href="#synchronized-关键字和-volatile-关键字的区别" class="headerlink" title="synchronized 关键字和 volatile 关键字的区别"></a>synchronized 关键字和 volatile 关键字的区别</h4><ol>
-<li>volatile 关键字是线程同步的轻量级实现，所以 volatile 性能肯定比 synchronized 关键字要好。但是 volatile 关键字只能用于变量而 synchronized 关键字可以修饰方法以及代码块。synchronized 关键字在 JavaSE1.6 之后进行了主要包括为了减少获得锁和释放锁带来的性能消耗而引入的偏向锁和轻量级锁以及其它各种优化之后执行效率有了显著提升，实际开发中使用 synchronized 关键字的场景还是更多一些。</li>
-<li>多线程访问 volatile 关键字不会发生阻塞，而 synchronized 关键字可能会发生阻塞。</li>
-<li>volatile 关键字能保证数据的可见性，但不能保证数据的原子性。synchronized 关键字两者都能保证。</li>
-<li>volatile 关键字主要用于解决变量在多个线程之间的可见性，而 synchronized 关键字解决的是多个线程之间访问资源的同步性。</li>
+                <h4 id="跨域简介"><a href="#跨域简介" class="headerlink" title="跨域简介"></a>跨域简介</h4><p>跨域指的是域名不同或者端口不同或者协议不同</p>
+<ol>
+<li>域名之间的跨域，例如：a.com 和 b.com </li>
+<li>主域名和子域名之间的跨域，例如ab.a.com 和 a.com</li>
+<li>不同协议之间的跨域，例如https:// 和 http://</li>
+<li>端口不同也存在跨域，例如 a.com:8080 和 a.com</li>
+<li>ip和域名之间也存在跨域，例如 124.12.42.123 和 a.com</li>
 </ol>
+<h4 id="跨域案例"><a href="#跨域案例" class="headerlink" title="跨域案例"></a>跨域案例</h4><ul>
+<li><p>编写一个controller</p>
+<pre><code>@RestController
+public class HelloController {
+
+  @GetMapping("/hello")
+  public String hello(){
+      return "hello";
+  }
+</code></pre></li>
+</ul>
+<p>}</p>
+<pre><code>
+- 在templates目录下新建一个HTML</code></pre>
+
+<meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <title>跨域测试</title>
+    <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<link rel="alternate" href="/atom.xml" title="pluto" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+
+<div id="hello"></div>
+
+<script>
+    $(function () {
+        $.get("http://test.aloneness.com:8080/hello", function (data) {
+            $("#hello").text(data);
+        })
+    })
+</script>
+
+```
+- 为了测试，更改hosts文件，将test.aloneness.com域名映射到localhost
+
+<p>hosts文件位置： C:\Windows\System32\drivers\etc</p>
+<pre><code>127.0.0.1     test.aloneness.com</code></pre><ul>
+<li>启动spring boot服务，访问localhost:8080, 会出现跨域</li>
+</ul>
+<blockquote>
+<p>Access to XMLHttpRequest at ‘<a href="http://test.aloneness.com:8080/hello'" target="_blank" rel="noopener">http://test.aloneness.com:8080/hello'</a> from origin ‘<a href="http://localhost:8080'" target="_blank" rel="noopener">http://localhost:8080'</a> has been blocked by CORS policy: No ‘Access-Control-Allow-Origin’ header is present on the requested resource.</p>
+</blockquote>
+<p>当前是在localhost:8080 但想要访问test.aloneness.com下的资源，于是就出现了跨域问题</p>
+<h4 id="使用注解的方式解决"><a href="#使用注解的方式解决" class="headerlink" title="使用注解的方式解决"></a>使用注解的方式解决</h4><p>Spring 提供了@CrossOrigin注解</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>value</td>
+<td>指定跨域的集合，默认为*(所有域都支持)，这些值对应HTTP响应头中的Access-Control-Allow-Origin</td>
+</tr>
+<tr>
+<td>origins</td>
+<td>同value</td>
+</tr>
+<tr>
+<td>allowedHeaders</td>
+<td>允许请求头中的header，默认都支持</td>
+</tr>
+<tr>
+<td>exposedHeaders</td>
+<td>响应头中允许访问的header，默认为空</td>
+</tr>
+<tr>
+<td>methods</td>
+<td>支持请求的方法，比如GET，POST，PUT等，默认和Controller中的方法上标注的一致。</td>
+</tr>
+<tr>
+<td>allowCredentials</td>
+<td>是否允许cookie随请求发送，使用时必须指定具体的域</td>
+</tr>
+<tr>
+<td>maxAge</td>
+<td>预请求的结果的有效期，默认30分钟</td>
+</tr>
+</tbody></table>
+<pre><code>@GetMapping("/hello")
+@CrossOrigin(value = "*")
+public String hello(){
+    return "hello";
+}</code></pre><p>再访问localhost:8080，即可成功</p>
+<h4 id="实现WebMvcConfigurer接口"><a href="#实现WebMvcConfigurer接口" class="headerlink" title="实现WebMvcConfigurer接口"></a>实现WebMvcConfigurer接口</h4><p>实现WebMvcConfigurer 接口，重写addCorsMappings()</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">WebConfig</span> <span class="token keyword">implements</span> <span class="token class-name">WebMvcConfigurer</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">guo</span><span class="token punctuation">(</span>CorsRegistry registry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        registry<span class="token punctuation">.</span><span class="token function">addMapping</span><span class="token punctuation">(</span><span class="token string">"/**"</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">allowedOrigins</span><span class="token punctuation">(</span><span class="token string">"*"</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">allowedMethods</span><span class="token punctuation">(</span><span class="token string">"GET"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="使用过滤器实现"><a href="#使用过滤器实现" class="headerlink" title="使用过滤器实现"></a>使用过滤器实现</h4><pre><code>import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
+
+@Configuration
+public class WebConfig {
+    @Bean
+    public FilterRegistrationBean corsFilter() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        CorsConfiguration config = new CorsConfiguration();
+        config.setAllowCredentials(true);
+        config.addAllowedOrigin("*");
+        source.registerCorsConfiguration("/**", config);
+        FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
+        bean.setOrder(0);
+        return bean;
+    }
+}</code></pre><p>源码地址：<a href="https://github.com/solitary-s/spring-boot-learn" target="_blank" rel="noopener">https://github.com/solitary-s/spring-boot-learn</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -544,7 +641,7 @@ JMM(Java 内存模型)规定所有的变量都是存在主存中的，每个线�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://solitary-s.github.io/2020/01/04/java-bing-fa-volatile-guan-jian-zi/">https://solitary-s.github.io/2020/01/04/java-bing-fa-volatile-guan-jian-zi/</a>
+                    <a href="https://solitary-s.github.io/2020/04/17/springboot-jie-jue-kua-yu-wen-ti/">https://solitary-s.github.io/2020/04/17/springboot-jie-jue-kua-yu-wen-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -582,8 +679,8 @@ JMM(Java 内存模型)规定所有的变量都是存在主存中的，每个线�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java并发/">
-                                    <span class="chip bg-color">Java并发</span>
+                                <a href="/tags/SpringBoot/">
+                                    <span class="chip bg-color">SpringBoot</span>
                                 </a>
                             
                         </div>
@@ -754,7 +851,7 @@ JMM(Java 内存模型)规定所有的变量都是存在主存中的，每个线�
         repo: 'https://github.com/solitary-s/solitary-s.github.io',
         owner: 'solitary-s',
         admin: "solitary-s",
-        id: '2020-01-04T00-06-16',
+        id: '2020-04-17T00-00-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -775,30 +872,86 @@ JMM(Java 内存模型)规定所有的变量都是存在主存中的，每个线�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/04/java-bing-fa-synchronized-guan-jian-zi/">
+                <a href="/2020/04/17/springboot-jie-jue-kua-yu-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Java并发-synchronized关键字">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="SpringBoot-解决跨域问题">
                         
-                        <span class="card-title">Java并发-synchronized关键字</span>
+                        <span class="card-title">SpringBoot-解决跨域问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简述synchronized 是一个同步、重量级锁。synchronized 关键字可以保证被它修饰的方法或者代码块在任意时刻只能有一个线程执行
-synchronized 关键字的使用修饰实例方法给当前对象实例加锁，进入同步代码需要获取当前
+                            跨域简介跨域指的是域名不同或者端口不同或者协议不同
+
+域名之间的跨域，例如：a.com 和 b.com 
+主域名和子域名之间的跨域，例如ab.a.com 和 a.com
+不同协议之间的跨域，例如https:// 和 http://
+端口不同
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-04
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/SpringBoot/" class="post-category">
+                                    SpringBoot
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/SpringBoot/">
+                        <span class="chip bg-color">SpringBoot</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/10/java-bing-fa-aqs/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Java并发-AQS">
+                        
+                        <span class="card-title">Java并发-AQS</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            简介AQS 全称为(AbstractQueuedSynchronizer), AQS 是一个用来构建锁和同步器的框架，使用 AQS 能简单且高效地构建出大量的同步器。
+原理AQS 核心思想是，如果被请求的共享资源空闲，则将当前请求资源的线程
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -816,61 +969,6 @@ synchronized 关键字的使用修饰实例方法给当前对象实例加锁，�
                     
                     <a href="/tags/Java并发/">
                         <span class="chip bg-color">Java并发</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/01/04/java-xian-cheng-xian-cheng-ji-chu/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Java线程-线程基础">
-                        
-                        <span class="card-title">Java线程-线程基础</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            1. 线程状态(State)线程状态有六种，在 java.lang.Thread 源码中
-public enum State {
-    NEW,
-    RUNNABLE,
-    BLOCKED,
-    WAITING,
-    TI
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-04
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java线程/" class="post-category">
-                                    Java线程
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java线程/">
-                        <span class="chip bg-color">Java线程</span>
                     </a>
                     
                 </div>
