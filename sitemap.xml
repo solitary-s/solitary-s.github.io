@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://solitary-s.github.io/2020/03/01/java-bing-fa-xian-cheng-chi/</loc>
+    
+    <lastmod>2020-04-17T15:33:20.432Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://solitary-s.github.io/2020/03/10/java-bing-fa-aqs/</loc>
+    
+    <lastmod>2020-04-17T15:15:10.789Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://solitary-s.github.io/2020/04/17/springboot-jie-jue-kua-yu-wen-ti/</loc>
     
-    <lastmod>2020-04-17T14:31:01.141Z</lastmod>
+    <lastmod>2020-04-17T15:10:18.508Z</lastmod>
     
   </url>
   
@@ -65,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://solitary-s.github.io/2020/03/10/java-bing-fa-aqs/</loc>
-    
-    <lastmod>2020-03-16T07:34:03.115Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://solitary-s.github.io/2020/01/04/java-xian-cheng-xian-cheng-ji-chu/</loc>
     
     <lastmod>2020-03-16T07:33:53.369Z</lastmod>
@@ -103,13 +110,6 @@
     <loc>https://solitary-s.github.io/2020/01/04/java-bing-fa-volatile-guan-jian-zi/</loc>
     
     <lastmod>2020-03-16T07:32:11.685Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://solitary-s.github.io/2020/03/01/java-bing-fa-xian-cheng-chi/</loc>
-    
-    <lastmod>2020-03-16T07:32:02.884Z</lastmod>
     
   </url>
   
